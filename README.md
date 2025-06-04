@@ -34,6 +34,11 @@ Com base nessas leituras, os LEDs indicam o status e o buzzer soa um alarme em c
 
 ### Ilustração
 
+Abaixo está uma representação visual do circuito físico montado no projeto:
+
+![Diagrama do sistema](img/diagrama.png)
+
+
 ```
 [ DHT22 ]      [ ULTRASSÔNICO ]
     |                 |
@@ -60,6 +65,12 @@ Você pode simular este projeto usando o **Wokwi**, uma plataforma online de sim
 ### Vídeo Demonstrativo
 
 🎥 *[Link a ser adicionado]*
+
+## Código Fonte
+
+```cpp
+// [Código completo colado aqui — veja acima]
+```
 
 ## Integrantes do Grupo
 
