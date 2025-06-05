@@ -66,11 +66,6 @@ Você pode simular este projeto usando o **Wokwi**, uma plataforma online de sim
 
 🎥 *[Link a ser adicionado]*
 
-## Código Fonte
-
-```cpp
-// [Código completo colado aqui — veja acima]
-```
 
 ## Integrantes do Grupo
 
