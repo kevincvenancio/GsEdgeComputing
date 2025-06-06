@@ -1,43 +1,47 @@
-# LNK Tech - Sistema de Alerta de Enchentes
+# 🌊 LNK Tech - Sistema de Alerta de Enchentes
 
-## Descrição do Problema
+## 📍 Descrição do Problema
 
-Enchentes urbanas representam uma séria ameaça em muitas regiões do Brasil, resultando em alagamentos de ruas, danos materiais e riscos à vida. Fatores como chuvas intensas, obstruções no sistema de drenagem e a falta de monitoramento em tempo real dificultam a prevenção e a resposta a esses eventos. 
+As enchentes urbanas representam uma ameaça recorrente em diversas regiões do Brasil, ocasionando alagamentos de ruas, destruição de patrimônio, perdas econômicas e riscos à vida. Fatores como chuvas intensas, falhas no sistema de drenagem e a ausência de monitoramento em tempo real dificultam ações preventivas eficazes.
 
-Há uma grande demanda por sistemas acessíveis e eficazes que permitam monitoramento preventivo e geração de alertas em áreas de risco, principalmente em comunidades carentes onde o impacto das enchentes é mais severo.
+Existe, portanto, uma demanda urgente por sistemas de alerta **acessíveis, confiáveis e de fácil implementação**, especialmente voltados para comunidades carentes, que são as mais afetadas por esses desastres naturais.
 
-## Visão Geral da Solução
+## 💡 Visão Geral da Solução
 
-A **LNK Tech** apresenta um sistema físico inteligente de monitoramento de riscos de enchentes. Este sistema utiliza sensores ambientais para detectar condições que indicam risco iminente de alagamentos e aciona alarmes visuais e sonoros para alertar a população local.
+A **LNK Tech** propõe um **sistema físico inteligente de monitoramento ambiental**, voltado à **prevenção de enchentes em áreas de risco**. O projeto utiliza sensores para detectar, em tempo real, variáveis críticas como:
 
-### Componentes Utilizados
+- Intensidade da chuva
+- Umidade relativa do ar
+- Nível da água
+- Fluxo de líquidos
 
-- Sensor DHT22 (temperatura e umidade)
-- Sensor ultrassônico (nível da água)
-- Potenciômetro (simulando sensor de chuva)
-- Sensor de fluxo (simulado no analógico A1)
-- LEDs de status (verde, amarelo e vermelho)
-- Buzzer para alerta sonoro
-- Display LCD I2C 16x2 para exibir mensagens
-- LED RGB simulando bomba d’água
+Com base nas leituras dos sensores, o sistema **aciona alertas visuais (LEDs)** e **sonoros (buzzer)**, além de simular o funcionamento de uma bomba d'água, ajudando a alertar a população e autoridades de maneira simples e eficaz.
 
-### Funcionamento
+### 🧩 Componentes Utilizados
 
-O sistema realiza a leitura periódica dos sensores e identifica o estado atual do ambiente:
+- **Sensor DHT22** – mede temperatura e umidade do ar  
+- **Sensor ultrassônico** – detecta o nível da água  
+- **Potenciômetro** – simula a intensidade da chuva  
+- **Sensor de fluxo** – simulado via entrada analógica (A1)  
+- **LEDs (verde, amarelo, vermelho)** – indicam o nível de risco  
+- **Buzzer** – emite alertas sonoros em situações críticas  
+- **Display LCD I2C 16x2** – exibe informações e mensagens de status  
+- **LED RGB** – simula o acionamento de uma bomba d’água
 
-- **Sem chuva:** sistema em estado de repouso.
-- **Chuva fraca/forte:** indica chuva sem risco iminente.
-- **Risco de enchente:** chuva intensa detectada.
-- **Água alta:** nível da água crítico.
+### ⚙️ Funcionamento
 
-Com base nessas leituras, os LEDs indicam o status e o buzzer soa um alarme em caso de emergência. A bomba é ligada virtualmente em caso de água alta ou risco de enchente.
+O sistema opera com base em quatro níveis de alerta, definidos pela leitura combinada dos sensores:
 
-### Ilustração
+- **🌤️ Sem chuva**: sistema em modo de repouso; LED verde ligado.  
+- **🌦️ Chuva fraca ou moderada**: LED amarelo aceso; sem alarme sonoro.  
+- **🌧️ Risco de enchente**: LED vermelho aceso; buzzer intermitente; alerta no LCD.  
+- **🌊 Nível de água crítico**: LED vermelho piscando; buzzer contínuo; LED RGB ligado simulando bomba de escoamento.
 
-Abaixo está uma representação visual do circuito físico montado no projeto:
+### 🖼️ Ilustração
+
+A seguir, uma representação esquemática do circuito desenvolvido:
 
 ![Diagrama do sistema](img/diagrama.png)
-
 
 ```
 [ DHT22 ]      [ ULTRASSÔNICO ]
@@ -46,29 +50,28 @@ Abaixo está uma representação visual do circuito físico montado no projeto:
 [ LCD ] -- [ ARDUINO UNO ] -- [ LEDs / Buzzer / Sensores ]
 ```
 
-## Como Simular o Projeto
+## 🧪 Como Simular o Projeto
 
-Você pode simular este projeto usando o **Wokwi**, uma plataforma online de simulação de circuitos Arduino.
+A simulação pode ser feita gratuitamente na plataforma online **Wokwi**, especializada em prototipagem de sistemas Arduino.
 
-### Passos para simular:
+### Passo a passo:
 
-1. Acesse o link do projeto: [Simulação no Wokwi](https://wokwi.com/projects/432149335150942209)
+1. Acesse o projeto.
 2. Clique em **"Start Simulation"**.
-3. Observe os dados no display LCD e no console serial.
-4. Altere os valores do potenciômetro para simular chuva.
-5. Modifique a posição do sensor ultrassônico para simular o nível da água.
+3. Observe os dados exibidos no **LCD** e no **console serial**.
+4. Ajuste o **potenciômetro** para simular diferentes intensidades de chuva.
+5. Mova o objeto diante do **sensor ultrassônico** para simular variações no nível da água.
 
-### Link da Simulação
+### 🔗 Link Direto para a Simulação
 
-🔗 [https://wokwi.com/projects/432149335150942209](https://wokwi.com/projects/432149335150942209)
+[https://wokwi.com/projects/432149335150942209](https://wokwi.com/projects/432149335150942209)
 
-### Vídeo Demonstrativo
+### 🎥 Vídeo Demonstrativo
 
-🎥 https://youtu.be/FmDERlUK2YI?feature=shared
+https://www.youtube.com/watch?v=FmDERlUK2YI
 
+## 👨💻 Integrantes do Grupo
 
-## Integrantes do Grupo
-
-- **Kevin Carvalho Venancio** - RM: 561459
-- **Nicolas Barnabe da Cruz** - RM: 561997
-- **Luiz Antônio Morais** - RM: 562142
+- **Kevin Carvalho Venancio** – RM: 561459  
+- **Nicolas Barnabe da Cruz** – RM: 561997  
+- **Luiz Antônio Morais** – RM: 562142
